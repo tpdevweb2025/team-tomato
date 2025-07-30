@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,17 +8,221 @@
 
 body {
   font-family: "Inter", sans-serif;
+  width: 100%;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
+  width: 100%;
+}
+header svg {
+  display: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1728px;
+  padding: 40px 0;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  list-style-type: none;
+  font-weight: 600;
+}
+nav a {
+  text-decoration: none;
+  color: #2B2B2B;
+}
+nav .connect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 86px;
+  font-weight: 600;
+  line-height: 114.523%;
+}
+h1 span {
+  color: #008080;
+}
+
+.signin {
+  color: #008080;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.signup {
+  color: white;
+  border-radius: 4px;
+  background: #008080;
+  box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.03);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  outline: none;
+  height: 100%;
 }
 
 main {
   display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+section {
+  display: flex;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1728px;
+  padding: 0px 160px;
+}
+p {
+  color: #575757;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 175.023%;
+}
+
+.email {
+  position: relative;
+}
+.email svg {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+.email input {
+  width: 404px;
+  height: 76px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 10px 50px 0 rgba(11, 11, 11, 0.08);
+  padding: 1rem 4rem;
+  outline: none;
+  border: none;
+}
+.email input::placeholder {
+  color: #7e7e7e;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 76px;
+}
+
+.interviews > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 41px;
+}
+.interviews > div > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.interviews > div h2 {
+  width: 100%;
+}
+.interviews > div p {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 46px;
+  border-radius: 35px 4px;
+  border: 3px solid #d5dddd;
+  background: #f7f7f7;
+  width: 30%;
+}
+
+.card-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-head > div:first-child {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  overflow: hidden;
+}
+.card-head > div:first-child > #first-interview {
+  position: absolute;
+  height: 241px;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card-head > div:first-child > #second-interview {
+  position: absolute;
+  height: 193px;
+  top: 110%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.card-head > div:first-child > #third-interview {
+  position: absolute;
+  height: 191px;
+  top: 130%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+.card-head > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-content {
+  position: relative;
+}
+.card-content p:last-child {
+  position: absolute;
+  bottom: 33px;
+  right: 29px;
+  color: #008080;
+  font-size: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
