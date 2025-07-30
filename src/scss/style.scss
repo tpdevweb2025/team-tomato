@@ -10,11 +10,12 @@
 
 body {
   font-family: "Inter", sans-serif;
+  width: 100%;
 }
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   width: 100%;
@@ -26,12 +27,14 @@ header {
 nav {
   @include flex(row, space-between, center);
   width: 100%;
-  gap: 20px;
+  max-width: 1728px;
+  padding: 40px 0;
   ul {
     display: flex;
     gap: 20px;
     li {
       list-style-type: none;
+      font-weight: 600;
     }
   }
   a {
@@ -42,6 +45,16 @@ nav {
     @include flex(row, space-between, center);
     gap: 2rem;
   }
+}
+
+h1 {
+font-size: 86px;
+font-style: normal;
+font-weight: 600;
+line-height: 114.523%; 
+span {
+  color: $accent-color;
+}
 }
 
 .signin {
@@ -67,6 +80,13 @@ main {
 
 section {
   display: flex;
+}
+
+.hero {
+  @include flex(row, space-between, center);
+  width: 100%;
+  max-width: 1728px;
+  padding: 0px 160px;
 }
 
 .cards {
