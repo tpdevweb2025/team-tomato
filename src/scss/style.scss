@@ -26,6 +26,11 @@ header {
     }
 }
 
+.wrapper {
+     margin: 0px auto;
+     width: 1728px;
+}
+
 nav {
     @include flex(row, space-between, center);
     width: 100%;
