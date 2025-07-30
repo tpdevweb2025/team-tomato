@@ -19,4 +19,14 @@ header {
 main {
     // test
     display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+section {
+    display: flex;
+}
+
+.cards {
+    display: flex;
 }
