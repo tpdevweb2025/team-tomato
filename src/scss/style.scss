@@ -1,32 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@use "mixins/mixins" as *;
+@use "variables/variables" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  svg {
+    display: none;
+  }
+}
+
+nav {
+  @include flex(row, space-between, center);
+  width: 100%;
+  gap: 20px;
+  ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+    gap: 20px;
+    li {
+      list-style-type: none;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $main-color
+  }
+  .connect {
+    @include flex(row, space-between, center);
+    gap: 2rem;
+  }
+}
+
+.signin {
+  color: $accent-color;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.signup {
+  color: white;
+  border-radius: 4px;
+  background: #008080;
+  box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.03);
+  padding: 0.75rem 1.5rem;
 }
 
 main {
-    // test
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  // test
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 section {
-    display: flex;
+  display: flex;
 }
 
 .cards {
-    display: flex;
+  display: flex;
 }
