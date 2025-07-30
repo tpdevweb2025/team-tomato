@@ -5,197 +5,251 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    width: 100%;
+  font-family: "Inter", sans-serif;
+  width: 100%;
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    svg {
-        display: none;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  svg {
+    display: none;
+  }
 }
 
-.wrapper {
-     margin: 0px auto;
-     width: 1728px;
-}
+
 
 nav {
+  @include flex(row, space-between, center);
+  width: 100%;
+  max-width: 1728px;
+  padding: 40px 0;
+  ul {
+    display: flex;
+    gap: 20px;
+    li {
+      list-style-type: none;
+      font-weight: 600;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $main-color;
+  }
+  .connect {
     @include flex(row, space-between, center);
-    width: 100%;
-    max-width: 1728px;
-    padding: 40px 0;
-    ul {
-        display: flex;
-        gap: 20px;
-        li {
-            list-style-type: none;
-            font-weight: 600;
-        }
-    }
-    a {
-        text-decoration: none;
-        color: $main-color;
-    }
-    .connect {
-        @include flex(row, space-between, center);
-        gap: 2rem;
-    }
+    gap: 2rem;
+  }
 }
 
 h1 {
-    font-size: 86px;
-    font-weight: 600;
-    line-height: 114.523%;
-    span {
-        color: $accent-color;
-    }
+  font-size: 86px;
+  font-weight: 600;
+  line-height: 114.523%;
+  span {
+    color: $accent-color;
+  }
+}
+
+h2 {
+  color: #1e1e1e;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h3 {
+  color: #323232;
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .signin {
-    color: $accent-color;
-    font-size: 20px;
-    font-weight: 600;
+  color: $accent-color;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .signup {
-    color: white;
-    border-radius: 4px;
-    background: #008080;
-    box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.03);
-    padding: 0.75rem 1.5rem;
-    border: none;
-    outline: none;
-    height: 100%;
+  color: white;
+  border-radius: 4px;
+  background: #008080;
+  box-shadow: 0 15px 26px 0 rgba(0, 0, 0, 0.03);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  outline: none;
+  height: 100%;
 }
 
 main {
-    // test
-    display: flex;
-    flex-direction: column;
-    gap: 64px;
+  // test
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 section {
-    display: flex;
+  display: flex;
 }
 
 .hero {
-    @include flex(row, space-between, center);
-    width: 100%;
-    max-width: 1728px;
-    padding: 0px 160px;
-    .content {
-    }
+  @include flex(row, space-between, center);
+  width: 100%;
+  max-width: 1728px;
+  padding: 0px 160px;
+  .wrapper {
+  margin: 0px auto;
+  width: 1300px;
+}
+.content {
+  @include flex(column, start, start);
+  gap: 2rem;
+}
 }
 
 p {
-    color: $text-color;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 175.023%;
+  color: $text-color;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 175.023%;
 }
 
 .email {
-    position: relative;
-    svg {
-        position: absolute;
-        top: 50%;
-        left: 5%;
-        transform: translateY(-50%);
+  position: relative;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+  input {
+    width: 404px;
+    height: 76px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    box-shadow: 0 10px 50px 0 rgba(11, 11, 11, 0.08);
+    padding: 1rem 4rem;
+    outline: none;
+    border: none;
+    &::placeholder {
+      color: #7e7e7e;
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 600;
     }
-    input {
-        width: 404px;
-        height: 76px;
-        flex-shrink: 0;
-        border-radius: 4px;
-        box-shadow: 0 10px 50px 0 rgba(11, 11, 11, 0.08);
-        padding: 1rem 4rem;
-        outline: none;
-        border: none;
-        &::placeholder {
-            color: #7e7e7e;
-            font-family: Inter;
-            font-size: 20px;
-            font-weight: 600;
-        }
-    }
+  }
 }
 
 form {
-    @include flex(row, center, center);
-    gap: 1rem;
-    height: 76px;
+  @include flex(row, center, center);
+  gap: 1rem;
+  height: 76px;
 }
 
 .interviews > div {
-    @include flex(column, center, center);
-    gap: 41px;
-    & > div {
-        @include flex(row, space-between, center);
+  @include flex(column, center, center);
+  gap: 41px;
+  & > div {
+    @include flex(row, space-between, center);
+  }
+  & h2 {
+    width: 100%;
+  }
+  & p {
+    width: 100%;
+  }
+}
+
+.services_section {
+  background-color: #f7f7f7;
+  .wrapper {
+    width: 100%;
+    max-width: 1728px;
+    @include flex(row, center, center);
+    gap: 4rem;
+  }
+  .our_services {
+    @include flex(column, center, start);
+    gap: 2rem;
+    a {
+      padding: 1rem;
+      border: 3px solid #d5dddd;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #1e1e1e;
+      font-size: 22px;
+      font-weight: 600;
     }
-    & h2 {
-        width: 100%;
-    }
-    & p {
-        width: 100%;
-    }
+  }
+}
+
+.services_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  > div {
+    @include flex(row, start, center);
+    gap: 1.5rem;
+  }
+}
+
+.interviews {
+  @include flex(row, center, center);
+  .wrapper {
+    max-width:1300px;
+  }
 }
 
 .card {
-    @include flex(column, center, center);
-    gap: 46px;
-    border-radius: 35px 4px;
-    border: 3px solid #d5dddd;
-    background: #f7f7f7;
-    width: 30%;
+  @include flex(column, center, center);
+  gap: 46px;
+  border-radius: 35px 4px;
+  border: 3px solid #d5dddd;
+  background: #f7f7f7;
+  width: 30%;
 }
 
 .card-head {
-    @include flex(row, center, center);
-    & > div:first-child {
-        position: relative;
-        width: 75px;
-        height: 75px;
-        border-radius: 50%;
-        background: #d9d9d9;
-        overflow: hidden;
-        & > #first-interview {
-            @include imgSetUp(241px, 140%, 50%);
-        }
-        & > #second-interview {
-            @include imgSetUp(193px, 110%, 15%);
-        }
-        & > #third-interview {
-            @include imgSetUp(191px, 130%, 45%);
-        }
+  @include flex(row, center, center);
+  & > div:first-child {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    overflow: hidden;
+    & > #first-interview {
+      @include imgSetUp(241px, 140%, 50%);
     }
-    & > div:last-child {
-        @include flex(column, center, center);
-        gap: 10px;
+    & > #second-interview {
+      @include imgSetUp(193px, 110%, 15%);
     }
+    & > #third-interview {
+      @include imgSetUp(191px, 130%, 45%);
+    }
+  }
+  & > div:last-child {
+    @include flex(column, center, center);
+    gap: 10px;
+  }
 }
 
 .card-content {
-    position: relative;
-    & p:last-child {
-        position: absolute;
-        bottom: 33px;
-        right: 29px;
-        color: #008080;
-        font-size: 100px;
-    }
+  position: relative;
+  & p:last-child {
+    position: absolute;
+    bottom: 33px;
+    right: 29px;
+    color: #008080;
+    font-size: 100px;
+  }
 }
-
